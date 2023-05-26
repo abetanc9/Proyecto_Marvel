@@ -1,11 +1,17 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Personajes from './Personajes';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/personajes" component={Personajes} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
